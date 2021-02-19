@@ -1,0 +1,50 @@
+import React from 'react'
+import { withRouter } from 'react-router-dom'
+import logo from '../../assets/images/logo.png'
+
+import './navStyles.scss'
+const Navbar = (props) => {
+
+    const homeNavigationHandler = () => {
+        props.history.push('/')
+    }
+
+    const coursesNavigationHandler = () => {
+        props.history.push('/courses')
+    }
+
+    const teamNavigationHandler = () => {
+        props.history.push('/team')
+    }
+
+    const projectsNavigationHandler = () => {
+        props.history.push('/projects')
+    }
+
+    const eventsNavigationHandler = () => {
+        props.history.push('/events')
+    }
+
+    const aboutusNavigationHandler = () => {
+        props.history.push('/aboutUs')
+    }
+
+    return (
+        <div className="nav-main">
+            <div className="nav-bar">
+                <div className="logo">
+                    <img onClick={homeNavigationHandler} src={logo} />
+                </div>
+                <div className="links">
+                    <h4 onClick={coursesNavigationHandler}>Courses</h4>
+                    <h4 onClick={teamNavigationHandler}>Team</h4>
+                    <h4 onClick={projectsNavigationHandler}>Programs</h4>
+                    <h4 onClick={eventsNavigationHandler}>Events</h4>
+                    <h4 onClick={aboutusNavigationHandler}>About Us</h4>
+                </div>
+            </div>
+        </div>
+    )
+}
+
+export default withRouter(Navbar)
