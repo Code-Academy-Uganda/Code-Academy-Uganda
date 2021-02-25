@@ -65,3 +65,17 @@
     margin: 0;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .team-inner {
+    flex-direction: column;
+  }
+  .member-card {
+    width: 100%;
+  }
+  .team-main {
+    h2 {
+      font-size: 18px;
+    }
+  }
+}

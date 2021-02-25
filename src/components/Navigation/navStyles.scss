@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  max-width: 100%;
   position: sticky;
   top: 0;
   left: 0;
@@ -41,5 +42,50 @@
 
   & h4:hover {
     cursor: pointer;
+  }
+}
+
+.hamburger {
+  display: none;
+
+  i {
+    color: #1455bd;
+  }
+}
+
+.dropdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  right: 10px;
+  z-index: 100;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: none;
+  transition: 0.5s ease-in-out;
+
+  h4 {
+    margin: 0.5rem;
+  }
+
+  & h4:hover {
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .links {
+    display: none;
+  }
+  .hamburger {
+    display: inherit;
+  }
+  .dropdown {
+    display: inherit;
   }
 }

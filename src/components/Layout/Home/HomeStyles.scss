@@ -2,6 +2,7 @@
 
 .home-main {
   margin: auto;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -452,4 +453,65 @@
   justify-content: space-between;
   width: 7%;
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .about-mini-inner {
+    flex-direction: column;
+
+    button {
+      width: 30%;
+    }
+  }
+  .card-row2 {
+    flex-direction: column;
+  }
+  .card {
+    width: 100%;
+  }
+  .services {
+    width: 100%;
+  }
+  .footer-body {
+    flex-direction: column;
+  }
+  .body-separator {
+    display: none;
+  }
+  .email {
+    width: 90%;
+  }
+  .reviews-row {
+    width: 100%;
+    flex-direction: column;
+  }
+  .reviews-card {
+    width: 100%;
+  }
+  .about-us {
+    h1 {
+      font-size: 15px;
+    }
+  }
+  .mission-row {
+    flex-direction: column;
+  }
+  .about-us-column {
+    h2 {
+      font-size: 12px;
+    }
+
+    i {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+  .review {
+    h1 {
+      font-size: 15px;
+    }
+  }
 }
